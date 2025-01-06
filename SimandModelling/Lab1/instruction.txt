@@ -1,0 +1,33 @@
+Instruction:
+
+TITLE: TO generate random numbers
+Lab date: 22 Poush 2081
+
+1) Generate random numbers in Excel using =RAND() funcion, and in C using the rand() function from stdlib
+2) Separate a sample data of 20 and count the positive and the negative numbers
+3) Observe the number of positive being more as the dataset increases
+
+
+Lab report:
+
+Title: Too generate random numbers
+
+Theory:
+
+Random number generation in Excel:
+
+Random number generation in C/C++:
+
+Formula used: 1-2*rand()
+
+Observation:
+
+Screenshot of Excel dataset
+Screenshot of Excel graph
+
+Write code by hand
+Output  by hand
+
+Conclusion:
+
+In this way..
