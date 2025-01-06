@@ -1,3 +1,5 @@
 **/output/*
 **/.exe
 **/*.o
+**/__pycache__/
+**/.venv/
