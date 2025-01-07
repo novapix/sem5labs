@@ -1,7 +1,9 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int linear_search(int arr[], int n, int k) {
+int linear_search(vector<int> arr, int k) {
+  int n = int(arr.size());
   for (int i = 0; i < n; i++) {
     cout << "At " << i << " index, comparing " << arr[i] << " and " << k
          << endl;
@@ -12,6 +14,7 @@ int linear_search(int arr[], int n, int k) {
   }
   return -1;
 }
+
 void print_message(int index) {
   cout << (index == -1 ? "Key not found in array"
                        : "Key Found in index " + to_string(index))
@@ -19,22 +22,9 @@ void print_message(int index) {
 }
 
 int main() {
-  int res = 0;
-  int arr_best[7] = {1, 5, 6, 7, 2, 3, 4}, k_b = 1;
-  int arr_worst[7] = {5, 6, 7, 1, 2, 3, 4}, k_w = 10;
-  int arr_avg[7] = {5, 6, 7, 1, 2, 3, 4}, k_a = 1;
-
-  cout << "\nBest case: " << endl;
-  res = linear_search(arr_best, 7, k_b);
+  int res = 0, key = 6;
+  vector<int> arr = {2, 4, 5, 6, 7, 8, 11};
+  res = linear_search(arr, key);
   print_message(res);
-
-  cout << "\nWorst case: " << endl;
-  res = linear_search(arr_worst, 7, k_w);
-  print_message(res);
-
-  cout << "\nAverage case: " << endl;
-  res = linear_search(arr_avg, 7, k_a);
-  print_message(res);
-
   return 0;
 }
