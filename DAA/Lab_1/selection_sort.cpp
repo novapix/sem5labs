@@ -12,7 +12,7 @@ void print_arr(const vector<int>& a) {
 
 void selection_sort(vector<int>& a) {
   int n = a.size();
-  for (int i = 0; i < n; ++i) {
+  for (int i = 0; i < n - 1; ++i) {
     int index = i;
     for (int j = i + 1; j < n; ++j) {
       if (a[j] < a[index]) {
