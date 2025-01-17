@@ -7,7 +7,7 @@ def caeser_cypher(text: str, shift: int) -> str:
             else:
                 result += chr((ord(char) - 97 + shift) % 26 + 97)
         else:
-            result += char
+            result += str((int(char) + shift) % 10)
 
     return result
 
