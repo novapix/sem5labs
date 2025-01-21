@@ -44,8 +44,8 @@ void merger(vector<int>& a, int first, int mid, int last) {
   }
 }
 
-int merge_sort(vector<int>& a, int first, int last) {
-  if (first >= last) return 0;
+void merge_sort(vector<int>& a, int first, int last) {
+  if (first >= last) return;
   int mid = first + (last - first) / 2;
 
   print_vec(a, first, mid);
@@ -58,11 +58,31 @@ int merge_sort(vector<int>& a, int first, int last) {
 
   cout << "Merged array is: ";
   print_vec(a, first, last);
-  return 0;
 }
 
 int main() {
-  vector<int> arr = {5, 2, 8, 1, 3, 7};
+  vector<int> arr = {};
+  cout << "\nAverage Case" << endl;
+  arr = {5, 2, 8, 1, 3, 7};
   merge_sort(arr, 0, arr.size() - 1);
+  cout << "Sorted array: ";
+  print_vec(arr, 0, arr.size() - 1);
+
+  cout << "------------------" << endl;
+
+  cout << "\nBest Case" << endl;
+  arr = {1, 2, 3, 4, 5, 7};
+  merge_sort(arr, 0, arr.size() - 1);
+  cout << "Sorted array: ";
+  print_vec(arr, 0, arr.size() - 1);
+  cout << "------------------" << endl;
+
+  cout << "\nWorst Case" << endl;
+  arr = {7, 6, 5, 4, 3, 1};
+  merge_sort(arr, 0, arr.size() - 1);
+  cout << "Sorted array: ";
+  print_vec(arr, 0, arr.size() - 1);
+  cout << "------------------" << endl;
+
   return 0;
 }

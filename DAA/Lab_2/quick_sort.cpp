@@ -32,9 +32,25 @@ void quick_sort(vector<int>& a, int low, int high) {
 }
 
 int main() {
-  vector<int> arr = {8, 1, 3, 7, 10, 6};
-  quick_sort(arr, 0, 5);
+  vector<int> arr = {};
+
+  cout << "\nAverage Case" << endl;
+  arr = {5, 2, 8, 1, 3, 7};
+  quick_sort(arr, 0, arr.size() - 1);
   cout << "After Sorting:\n";
-  print_arr(arr, 0, 5);
+  print_arr(arr, 0, arr.size() - 1);
+
+  cout << "\nBest Case" << endl;
+  arr = {1, 2, 3, 4, 5, 7};
+  quick_sort(arr, 0, arr.size() - 1);
+  cout << "After Sorting:\n";
+  print_arr(arr, 0, arr.size() - 1);
+
+  cout << "\nWorst Case" << endl;
+  arr = {7, 6, 5, 4, 3, 1};
+  quick_sort(arr, 0, arr.size() - 1);
+  cout << "After Sorting:\n";
+  print_arr(arr, 0, arr.size() - 1);
+
   return 0;
 }
