@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables and Forms Example</title>
+</head>
+
+<body>
+    <table border="1">
+        <caption>Employee Details</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Sanjay Sharma</td>
+                <td>Manager</td>
+                <td>Kathmandu</td>
+            </tr>
+            <tr>
+                <td>Assistant Manager</td>
+                <td>Pokhara</td>
+            </tr>
+
+            <tr>
+                <td>Rajendra Bhatta</td>
+                <td>Software Engineer</td>
+                <td>Chitwan</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Aayush Lamichhane</td>
+                <td>Butwal</td>
+            </tr>
+        </tbody>
+    </table><br>
+
+    <table border="1">
+        <caption>Employee Registration</caption>
+        <form action="/submit" method="post">
+            <tr>
+                <td>Full Name:</td>
+                <td colspan="2"><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+                <td>Email Address:</td>
+                <td colspan="2"><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td colspan="2">
+                    <input type="radio" id="male" name="gender" value="Male" checked>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td colspan="2"><input type="date" placeholder="dd-mm-yyyy" id="dob" name="dob" required></td>
+            </tr>
+            <tr>
+                <td>Position:</td>
+                <td colspan="2">
+                    <select id="position" name="position">
+                        <option value="developer">Developer</option>
+                        <option value="manager">Manager</option>
+                        <option value="designer">Designer</option>
+                        <option value="hr">HR</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Department:</td>
+                <td colspan="2"><input type="text" id="department" name="department" required></td>
+            </tr>
+            <tr>
+                <td>Skills:</td>
+                <td colspan="2">
+                    <input type="checkbox" id="html" name="skills" value="HTML">
+                    <label for="html">HTML</label><br>
+                    <input type="checkbox" id="css" name="skills" value="CSS">
+                    <label for="css">CSS</label><br>
+                    <input type="checkbox" id="js" name="skills" value="JavaScript">
+                    <label for="js">JavaScript</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Years of Experience:</td>
+                <td colspan="2"><input type="number" id="experience" name="experience" min="1"
+                        max="4000000000000000000000000000" step="1" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Address:</td>
+                <td colspan="2"><textarea id="address" name="address" required></textarea></td>
+            </tr>
+
+            <tr>
+                <td>LinkedIn Profile:</td>
+                <td colspan="2"><input type="url" id="linkedin" name="linkedin"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Submit"></td>
+                <td><input type="reset" value="Reset"></td>
+
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>
