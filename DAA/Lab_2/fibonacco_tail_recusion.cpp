@@ -2,7 +2,7 @@
 using namespace std;
 
 void fibonacciTailRec(int n, int a = 0, int b = 1) {
-  if (n <= 0) return;
+  if (n < 0) return;
   cout << a << " ";
   fibonacciTailRec(n - 1, b, a + b);
 }
