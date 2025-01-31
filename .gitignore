@@ -1,0 +1,8 @@
+**/output/*
+**/.exe
+**/*.o
+**/__pycache__/
+**/.venv/
+**/training/*
+**/test.*
+!*.*

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table and Forms</title>
+  </head>
+  <body>
+    <h3>Table</h3>
+    <table border="1">
+      <caption>
+        Student Information
+      </caption>
+      <thead>
+        <tr>
+          <th rowspan="2">Name</th>
+          <th colspan="2">Details</th>
+        </tr>
+        <tr>
+          <th>Roll No</th>
+          <th>Class</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aayush</td>
+          <td>4</td>
+          <td>301</td>
+        </tr>
+        <tr>
+          <td>Ankit</td>
+          <td>11</td>
+          <td>302</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Shared Student</td>
+          <td>103</td>
+          <td>10C</td>
+        </tr>
+        <tr>
+          <td>104</td>
+          <td>10D</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">End of Student Data</td>
+        </tr>
+      </tfoot>
+    </table>
+    <h3>Student Form</h3>
+    <form>
+      <table border="1">
+        <caption>
+          Student Registration
+        </caption>
+        <tr>
+          <td>Name</td>
+          <td>
+            <input type="text" id="name" name="name" required />
+          </td>
+        </tr>
+        <tr>
+          <td>Roll No</td>
+          <td>
+            <input type="number" id="roll-no" name="roll_no" required />
+          </td>
+        </tr>
+        <tr>
+          <td>Class</td>
+          <td>
+            <select id="class" name="class" required>
+              <option value="">Select Class</option>
+              <option value="10A">10A</option>
+              <option value="10B">10B</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label for="male">Male</label>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              required
+            />
+            <label for="female">Female</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>
+            <textarea id="address" name="address" required></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>Upload File</td>
+          <td>
+            <input type="file" name="fileupload" />
+          </td>
+        </tr>
+        <tr>
+          <td>Subjects</td>
+          <td>
+            <input type="checkbox" name="physics" value="physics" />Physics
+            <input type="checkbox" name="math" value="math" />Math
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

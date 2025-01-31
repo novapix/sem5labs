@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ankitdiyal/Desktop/sem5labs/SAM/lab1/output/qno1'
+relocations:     []
+...
