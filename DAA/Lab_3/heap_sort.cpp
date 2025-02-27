@@ -36,11 +36,12 @@ void heapSort(vector<int> &arr, int N) {
   for (int i = N / 2 - 1; i >= 0; i--) {
     heapify(arr, N, i);
   }
-
+  int count = 1;
   for (int i = N - 1; i > 0; i--) {
     swap(arr[0], arr[i]);
-    cout << "After swapping: ";
+    cout << "Pass " << count << ":\t";
     printArray(arr, N, i);
+    count++;
     heapify(arr, i, 0);
   }
 }
@@ -58,7 +59,7 @@ int main() {
 
   arr = {2, 3, 4, 5, 8, 12};
   N = arr.size();
-  cout << "Base Case\nOriginal Array: ";
+  cout << "Best Case\nOriginal Array: ";
   printArray(arr, N, __INT_MAX__);
   heapSort(arr, N);
   cout << "Sorted array: \t";
@@ -66,7 +67,7 @@ int main() {
 
   arr = {12, 11, 9, 8, 5, 1};
   N = arr.size();
-  cout << "Base Case\nOriginal Array: ";
+  cout << "Worst Case\nOriginal Array: ";
   printArray(arr, N, __INT_MAX__);
   heapSort(arr, N);
   cout << "Sorted array: \t";
