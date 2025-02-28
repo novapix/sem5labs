@@ -45,6 +45,7 @@
    - `type="number"`: For entering numeric values (e.g., Years of Experience).
    - `type="tel"`: For entering a telephone number.
    - `type="url"`: For entering a URL (e.g., LinkedIn Profile).
+   - `type="checkbox"`: Defines checkboxes for selecting multiple skills.
 
 4. **`<textarea>`**: Defines a multiline text input.
    - `rows="4"` and `cols="50"`: Specifies the visible size of the textarea (4 rows and 50 columns).
@@ -55,10 +56,8 @@
 6. **`<option>`**: Defines an option in a `<select>` dropdown list.
    - Contains various position options like "Developer", "Manager", etc.
 
-7. **`<input type="checkbox">`**: Defines checkboxes for selecting multiple skills.
-   - Used for selecting skills such as HTML, CSS, and JavaScript.
 
-8. **`<input type="submit">`**: Defines a submit button for the form.
+7. **`<input type="submit">`**: Defines a submit button for the form.
    - Used to submit the form data to the specified action URL.
 
 ### Additional Attributes:

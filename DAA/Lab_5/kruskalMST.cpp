@@ -1,3 +1,4 @@
+#include <cstdio>
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -7,11 +8,12 @@ struct Edge {
 };
 
 class Kruskal {
- public:
+ private:
   int V;
   vector<vector<int>> graph;
   vector<Edge> edges;
 
+ public:
   Kruskal(int vertices) {
     V = vertices;
     graph.resize(V, vector<int>(V, 0));
@@ -61,13 +63,20 @@ class Kruskal {
     }
   }
 
-  void print(const vector<Edge> &result) {
+  void printGraph(const vector<Edge> &result) {
     int totalWeight = 0;
+    int s = static_cast<int>(result.size());
     cout << "Minimum Spanning Tree Edges:" << endl;
-    for (auto &edge : result) {
-      printf("Edge %d-%d with weight %d\n", edge.src, edge.dest, edge.weight);
-      totalWeight += edge.weight;
+    // for (auto &edge : result) {
+    //   printf("Edge %d-%d with weight %d\n", edge.src, edge.dest,
+    //   edge.weight); totalWeight += edge.weight;
+    // }
+    for (int i = 0; i < s; ++i) {
+      printf("Edge %d-%d with weight %d\n", result[i].src, result[i].dest,
+             result[i].weight);
+      totalWeight += result[i].weight;
     }
+
     cout << "Cost of the Minimum Spanning Tree: " << totalWeight << endl;
   }
 
@@ -80,22 +89,24 @@ class Kruskal {
 
     cout << "Traversing Edges:" << endl;
     for (auto &edge : edges) {
-      //   cout << "Checking Edge: " << edge.src << "-" << edge.dest
-      //        << " with weight " << edge.weight << endl;
+      cout << "Checking Edge: " << edge.src << "-" << edge.dest
+           << " with weight " << edge.weight << endl;
       int x = find(parent, edge.src);
       int y = find(parent, edge.dest);
 
       if (x != y) {
         result.push_back(edge);
-        cout << "Selected Edge: " << edge.src << "-" << edge.dest
-             << " with weight " << edge.weight << endl;
+        // cout << "Selected Edge: " << edge.src << "-" << edge.dest
+        //      << " with weight " << edge.weight << endl;
+        printf("Selecting Edge: %d - %d with weight %d\n", edge.src, edge.dest,
+               edge.weight);
         Union(parent, rank, x, y);
       } else {
         cout << "Edge: " << edge.src << "-" << edge.dest
              << " forms a cycle and is discarded." << endl;
       }
     }
-    print(result);
+    printGraph(result);
   }
 };
 
